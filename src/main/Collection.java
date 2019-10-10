@@ -58,17 +58,41 @@ public class Collection
 	}
 	
 	/**
-	 * Searches the collection for films with the specified title, and displays their details if one or more are found
+	 * Searches the collection for a film with the specified title, and returns it
 	 * @param title The title to look for
 	 */
-	public void searchFilm(String title)
+	public Film searchFilm(String title)
 	{
 		for(int i=0; i<3; i++)
 		{
 			if(films[i].getTitle().equals(title))
 			{
-				films[i].displayDetails();
+				return films[i];
 			}
 		}
+		return null;
+	}
+	
+	/**
+	 * Searches the collection for a film with the specified title and displays its details
+	 * @param title The title to look for
+	 */
+	public void searchAndDisplayFilm(String title)
+	{
+		//NULL CHECK
+		searchFilm(title).displayDetails();
+	}
+	
+	/**
+	 * Adds the cost of all films in the collection and displays the result
+	 */
+	public void displayTotalCost()
+	{
+		double out = 0;
+		for(int i=0; i<3; i++)
+		{
+			out += films[i].getCost();
+		}
+		System.out.println("Total cost: " + out);
 	}
 }

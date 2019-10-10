@@ -12,7 +12,7 @@ public class Film
 	private String title;
 	private String director;
 	private int duration;
-	private float cost;
+	private double cost;
 	
 	/**
 	 * Default constructor. Initialises all strings to "" and all numbers to 0
@@ -96,7 +96,7 @@ public class Film
 	 * Returns the purchase cost of this film, expressed in pence
 	 * @return The cost in pence
 	 */
-	public float getCost()
+	public double getCost()
 	{
 		return cost;
 	}
@@ -105,7 +105,7 @@ public class Film
 	 * Sets the purchase cost of this film
 	 * @param cost The cost
 	 */
-	public void setCost(float cost)
+	public void setCost(double cost)
 	{
 		this.cost = cost;
 	}
@@ -126,7 +126,7 @@ public class Film
 	}
 	
 	/**
-	 * Prints all details of this film, displaying the cost.
+	 * Displays all details of this film.
 	 */
 	public void displayDetails()
 	{
